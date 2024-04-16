@@ -1,30 +1,29 @@
-CREATE TABLE regions
-    ( region_id      NUMBER 
-       CONSTRAINT  region_id_nn NOT NULL 
-    , region_name    VARCHAR2(25) 
-    );
+create table regions (
+	region_id   number
+		constraint region_id_nn not null,
+	region_name varchar2(25)
+);
 
-CREATE UNIQUE INDEX reg_id_pk
-ON regions (region_id);
-INSERT INTO regions VALUES 
+create unique index reg_id_pk on
+	regions (
+		region_id
+	);
+insert into regions values (
+	1,
+	'Europe'
+);
 
-        ( 1
-        , 'Europe' 
-        );
+insert into regions values (
+	2,
+	'Americas'
+);
 
-INSERT INTO regions VALUES 
-        ( 2
-        , 'Americas' 
-        );
+insert into regions values (
+	3,
+	'Asia'
+);
 
-INSERT INTO regions VALUES 
-        ( 3
-        , 'Asia' 
-        );
-
-INSERT INTO regions VALUES 
-        ( 4
-        , 'Middle East and Africa' 
-        );
-
-
+insert into regions values (
+	4,
+	'Middle East and Africa'
+);
